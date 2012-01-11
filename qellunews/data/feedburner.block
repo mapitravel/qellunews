@@ -1,0 +1,5 @@
+<div id="fb-subscribe" class="align-center"><form action="http://feedburner.google.com/fb/a/mailverify" method="post" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=machupicchu-noticias', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" target="popupwindow">
+<p><input style="width: 230px;" type="text" name="email"></p>
+<input type="hidden" name="uri" value="machupicchu-noticias"> <input type="hidden" name="loc" value="es_ES">
+<p><input type="submit" value="Suscribirse"></p>
+</form></div>

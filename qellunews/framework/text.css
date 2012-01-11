@@ -1,0 +1,152 @@
+/*
+	960 Grid System ~ Text CSS.
+
+	Learn more ~ http://960.gs/
+
+	Licensed under GPL and MIT.
+
+*/
+
+/* `Basic HTML
+
+----------------------------------------------------------------------------------------------------*/
+body {
+	font: 13px/1.5em Arial, Helvetica, sans-serif;
+	color: #2d303a;
+	background: #F3F3CD;
+}
+a {
+	text-decoration: none;
+	color: #4c6590;
+}
+a:hover {
+	color: #A35A20;
+}
+a:focus {
+	outline: 1px dotted;
+}
+hr {
+	border: 0 #ccc solid;
+	border-top-width: 1px;
+	clear: both;
+	height: 0;
+}
+fieldset {
+	border: 1px solid #ede9de;
+	padding: 10px;
+}
+
+/* `Headings
+
+----------------------------------------------------------------------------------------------------*/
+
+
+
+h1 {
+	font-size: 24px;
+	font-weight: normal;
+	line-height: 1.2em;
+	color: #000;
+}
+
+h2 {
+	font-size: 18px;
+	font-weight: normal;
+	color: #000;
+	line-height: 1.2em;
+}
+
+h3 {
+	font-size: 17px;
+	font-weight: normal;
+	color: #000;
+	line-height: 1.2em;
+}
+h4 {
+	font-size: 14px;
+}
+h5 {
+	font-size: 13px;
+}
+h6 {
+	font-size: 12px;
+}
+/* `Spacing
+
+----------------------------------------------------------------------------------------------------*/
+
+
+ol {
+	list-style: decimal;
+}
+ul {
+	list-style: disc;
+}
+li {
+	margin-left: 30px;
+	list-style-image: url('../images/icon-list.gif');
+	padding-bottom: 2px;
+}
+p,  dl,  hr,  h1,  h2,  h3,  h4,  h5,  h6,  ol,  ul,  pre,  table,  address,  fieldset {
+	margin-bottom: 10px;
+}
+
+/* 
+
+	Cusco Sky table styles
+
+	written by Braulio Soncco http://www.buayacorp.com
+
+*/
+
+
+
+table {
+	width: 99%;
+}
+table, th, td {
+	border: 1px solid #dee8f3;
+	border-collapse: collapse;
+	color: #555;
+}
+caption {
+	font-size: 150%;
+	font-weight: bold;
+	margin: 5px;
+}
+td, th {
+	padding: 2px 4px !important;
+}
+thead th {
+	text-align: center !important;
+	background: #E6EDF5;
+	color: #4F76A3;
+	font-size: 90% !important;
+}
+tbody th {
+	font-weight: bold;
+}
+.system-status-report th {
+	padding-left: 35px !important;
+}
+tbody tr.even {
+	background: #FFF;
+}
+tbody tr.odd {
+	background: #EDF1FB;
+}
+tfoot th, tfoot td {
+	font-size: 85%;
+}
+.align-center {
+	text-align: center;
+}
+.align-right {
+	text-align: right;
+}
+.float-left, .left {
+	float: left;
+}
+.float-right, .right {
+	float: right;
+}

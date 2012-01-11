@@ -1,0 +1,105 @@
+.region-homeright .block .content,
+.region-homemore .block .content {
+	background: #f3f3f3;
+	padding: 10px;
+}
+
+.region-homeleft .block .content,
+.region-homebottom .block .content {
+	padding: 10px;
+}
+
+.region-homeleft .block.first .content {
+	padding: 0;
+}
+
+/* Noticias */
+.noticia {
+	margin-bottom: 55px;
+}
+
+.noticia h3 {
+	font-size: 20px;
+	border-bottom: 1px solid #e5e5e5;
+	margin-bottom: 2px;
+}
+
+.noticia h3 a {
+	color: #000;
+}
+
+.noticia h3 a:hover {
+	color: #a35a20;
+}
+
+.noticia-fecha {
+	font-size: 11px;
+	color: #8d8d8d;
+	text-align: right;
+	margin-bottom: 2px;
+}
+
+.noticia-social {
+	text-align: right;
+	padding-left: 260px;
+}
+
+#welcome {
+	margin-bottom: 10px;
+	position: relative;
+}
+
+#welcome h1 {
+	color: #749536;
+	border-bottom: 1px solid #cdc8c8;
+	font-size: 30px;i
+	font-family: 'Open Sans', Arial, sans-serif;
+}
+
+#welcome img {
+	margin-bottom: 10px;
+}
+
+#welcome p {
+	font-size: 13px;
+}
+
+#welcome .description a {
+	text-decoration: underline;
+	color: #e97b0f;
+}
+
+#welcome .description a:hover {
+	color: #a96833;
+}
+
+#welcome .button {
+	font-size: 16px;
+	color: #FFF;
+	padding: 10px 12px;
+	displaY: inline-block;
+}
+
+#welcome .action {
+	background: #e97b0f;
+	margin-right: 30px;
+}
+
+#welcome .no-action {
+	background: #749536;
+}
+
+
+#welcome .button:hover {
+	background: #a96833;
+}
+
+#welcome .hide-block {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+#welcome .hide-block a {
+	font-weight: bold;
+}

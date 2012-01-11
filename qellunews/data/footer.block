@@ -1,0 +1,39 @@
+<div class="grid_6 alpha">
+  <h3>Machupicchu Travel</h3>
+  <p><strong>E-mail</strong>: <a href="/sites/all/themes/mapi2012/chats/chat.php" class="live-chat">info@machupicchu.biz</a><br />
+    <strong>MSN</strong>: <a href="/sites/all/themes/mapi2012/chats/chat.php" class="live-chat">mapitravel@hotmail.com</a><br />
+    +51-84-264242 ó +51-84-223010<br />
+    <strong>Móvil</strong>: <a href="http://media.perunoticias.net/html/skype.html" class="live-skype">+51-984630919</a> ó <a href="http://media.perunoticias.net/html/skype.html" class="live-skype">984654111</a><br />
+    <strong>RPM</strong>: <a href="http://media.perunoticias.net/html/skype.html" class="live-skype">#689011</a> ó <a href="http://media.perunoticias.net/html/skype.html" class="live-skype">#687070</a><br />
+    <strong>Oficina Cusco</strong>: Av. Tomasa Ttito C. 1430 B-601<br />
+  <strong>Oficina Machupicchu</strong>: Calle Imperio de los Incas S/N</p>
+</div>
+<div class="grid_6">
+  <h3>Todo Machupicchu</h3>
+  <div class="grid_3 alpha">
+    <ul>
+      <li><a href="http://www.machupicchuviajes.com/maravillas-del-peru">Destinos del Perú</a></li>
+      <li><a href="http://www.agenciadeviajesmachupicchu.com/modules/news/article.php?storyid=73">Aerolíneas a Perú</a></li>
+      <li><a href="http://www.hotelesperu.com/">Hoteles en Perú</a></li>
+      <li><a href="http://www.caminoinca.pe/">Camino Inca</a></li>
+    </ul>
+  </div>
+  <div class="grid_3 omega">
+    <ul>
+      <li><a href="http://www.entradasamachupicchu.com">Entradas a Machupicchu</a></li>
+      <li><a href="http://www.news.machupicchu.com.pe">Noticias de Machupicchu</a></li>
+      <li><a href="http://www.testimonios.machupicchu.com.pe">Referencias a Machupicchu</a></li>
+      <li><a href="http://www.macchu-picchu.com">Tours to Machu Picchu</a></li>
+    </ul>
+  </div>
+</div>
+<div class="grid_3 omega">
+	<h3>Comparte</h3>
+	<li><a href="https://www.facebook.com/ToursaMachuPicchu">Facebook</a></li>
+    <li><a href="http://twitter.com/mapitravel4all">Twitter</a></li>
+    <li><a href="https://plus.google.com/u/0/101308596290104247441/">Google+</a></li>
+    <li><a href="http://www.youtube.com/user/machupicchutravel">Youtube</a></li>
+</div>
+<div class="clear"></div>
+<?php $ref = trim($_SERVER['HTTP_REFERER']); ?>
+<p class="align-center"><a href="http://www.ademails.com/estadisticas1059991653.htm"><img src="http://www.ademails.com/cgi-bin/contador.cgi?ID=1059991653&amp;referer=<?php print $ref; ?>" alt="Estadisticas"></a></p>
