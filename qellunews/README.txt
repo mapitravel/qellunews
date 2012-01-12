@@ -1,4 +1,4 @@
-INSTRUCCIONES PARA USAR EL THEME QELLUCHASKA
+INSTRUCCIONES PARA USAR EL THEME QELLUNEWS
 =============================================
 1. Módulos para deshabilitar
    a. overlay
@@ -13,27 +13,25 @@ INSTRUCCIONES PARA USAR EL THEME QELLUCHASKA
 	c. views
 	d. metatags_quick
 	e. opengraph_metatags
-	f. aggregator
 	g. php
 	
-3. Agregar los Feeds
-	Con el módulo Aggregator, agregar los feeds de noticias, testimonios y videos
 
-4. Views
+3. Views
     a. Habilitar el módulo views
 	b. Importar las 3 vistas ya creadas en la carpeta "data"
 
-5. Habilitar el Theme
+4. Habilitar el Theme
 	
-6. Bloques y Regiones
+5. Bloques y Regiones
 	Las regiones y bloques deben ir de la siguiente manera, el contenido de algunos bloques está también en la carpeta "data", Cambiar títulos de bloques de acuerdo a la conveniencia
 	
 	Región: Ayuda
 		Ayuda del sistema
 	Región: Sidebar
-		Top Tours Sidebar
+		Suscripciones FeedBurner (feedburner.block) [Full HTML]
+		View: Últimas noticias: Block
 		Facebook Recommendations (fbrec.block) [Javascript]
-		Vista: Testimonios Sidebar: Block
+		Top Tours Sidebar
 	Contenido
 		Contenido de la página principal
 	Pie de página
@@ -41,21 +39,10 @@ INSTRUCCIONES PARA USAR EL THEME QELLUCHASKA
 		Google Analytics
 		Machupicchu Chat (Olark)
 	Welcome
-		Bienvenida (welcome.block)
-	Home Izquierda
-		Top tours
-	Home Derecha
-		Vista: Lea testimonios de nuestros pasajeros: Block
-		Vista: Youtube Testimonios: Block
-	Home Bottom
-		Vista: Noticias de Machu Picchu: Block
-	Home More
-		Suscripciones FeedBurner (feedburner.block) [Full HTML]
-		Autorizaciones renovadas (autorizaciones.block) [Full HTML]
-		Facebook LikeBox Home (fblikebox.block) [Javascript]
+		View: Noticias: Block
 	Share Bar
 		Sharebar (sharebar.block) [PHP]
 
-7. Borrar todos los otros bloques, ya no sirven
+6. Borrar todos los otros bloques, ya no sirven
 		
-8. Nada más
+7. Nada más

@@ -1,18 +1,18 @@
 $view = new view;
-$view->name = 'lea_testimonios_de_nuestros_pasa';
+$view->name = 'noticias';
 $view->description = '';
 $view->tag = 'default';
-$view->base_table = 'aggregator_item';
-$view->human_name = 'Lea testimonios de nuestros pasajeros';
+$view->base_table = 'node';
+$view->human_name = 'Noticias';
 $view->core = 7;
 $view->api_version = '3.0';
 $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
-$handler->display->display_options['title'] = 'Lea testimonios de nuestros pasajeros';
+$handler->display->display_options['title'] = 'Noticias';
 $handler->display->display_options['use_more_text'] = 'más';
-$handler->display->display_options['access']['type'] = 'none';
+$handler->display->display_options['access']['type'] = 'perm';
 $handler->display->display_options['cache']['type'] = 'none';
 $handler->display->display_options['query']['type'] = 'views_query';
 $handler->display->display_options['query']['options']['query_comment'] = FALSE;
@@ -20,93 +20,213 @@ $handler->display->display_options['exposed_form']['type'] = 'basic';
 $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Reiniciar';
 $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Ordenar por';
 $handler->display->display_options['exposed_form']['options']['sort_asc_label'] = 'Ascendente';
-$handler->display->display_options['pager']['type'] = 'some';
-$handler->display->display_options['pager']['options']['items_per_page'] = '6';
-$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['pager']['type'] = 'full';
+$handler->display->display_options['pager']['options']['items_per_page'] = '15';
+$handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Elementos por página';
+$handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Todos -';
+$handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Desplazamiento';
 $handler->display->display_options['style_plugin'] = 'default';
-$handler->display->display_options['style_options']['group_rendered'] = 1;
 $handler->display->display_options['row_plugin'] = 'fields';
-/* Pie de página: Global: Área de texto */
-$handler->display->display_options['footer']['area']['id'] = 'area';
-$handler->display->display_options['footer']['area']['table'] = 'views';
-$handler->display->display_options['footer']['area']['field'] = 'area';
-$handler->display->display_options['footer']['area']['empty'] = FALSE;
-$handler->display->display_options['footer']['area']['content'] = '<p class="mapi-more"><a href="http://testimonios.machupicchu.com.pe/" target="_blank">Miles de testimonios más...</a></p>';
-$handler->display->display_options['footer']['area']['format'] = '2';
-$handler->display->display_options['footer']['area']['tokenize'] = 0;
-/* Campo: Agregador: Cuerpo */
-$handler->display->display_options['fields']['description']['id'] = 'description';
-$handler->display->display_options['fields']['description']['table'] = 'aggregator_item';
-$handler->display->display_options['fields']['description']['field'] = 'description';
-$handler->display->display_options['fields']['description']['label'] = '';
-$handler->display->display_options['fields']['description']['alter']['alter_text'] = 0;
-$handler->display->display_options['fields']['description']['alter']['make_link'] = 0;
-$handler->display->display_options['fields']['description']['alter']['absolute'] = 0;
-$handler->display->display_options['fields']['description']['alter']['external'] = 0;
-$handler->display->display_options['fields']['description']['alter']['replace_spaces'] = 0;
-$handler->display->display_options['fields']['description']['alter']['trim_whitespace'] = 0;
-$handler->display->display_options['fields']['description']['alter']['nl2br'] = 0;
-$handler->display->display_options['fields']['description']['alter']['word_boundary'] = 1;
-$handler->display->display_options['fields']['description']['alter']['ellipsis'] = 1;
-$handler->display->display_options['fields']['description']['alter']['strip_tags'] = 0;
-$handler->display->display_options['fields']['description']['alter']['trim'] = 0;
-$handler->display->display_options['fields']['description']['alter']['html'] = 0;
-$handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['description']['element_default_classes'] = 1;
-$handler->display->display_options['fields']['description']['hide_empty'] = 0;
-$handler->display->display_options['fields']['description']['empty_zero'] = 0;
-$handler->display->display_options['fields']['description']['hide_alter_empty'] = 1;
-/* Campo: Agregador: Sello temporal */
-$handler->display->display_options['fields']['timestamp']['id'] = 'timestamp';
-$handler->display->display_options['fields']['timestamp']['table'] = 'aggregator_item';
-$handler->display->display_options['fields']['timestamp']['field'] = 'timestamp';
-$handler->display->display_options['fields']['timestamp']['label'] = '';
-$handler->display->display_options['fields']['timestamp']['alter']['alter_text'] = 0;
-$handler->display->display_options['fields']['timestamp']['alter']['make_link'] = 0;
-$handler->display->display_options['fields']['timestamp']['alter']['absolute'] = 0;
-$handler->display->display_options['fields']['timestamp']['alter']['external'] = 0;
-$handler->display->display_options['fields']['timestamp']['alter']['replace_spaces'] = 0;
-$handler->display->display_options['fields']['timestamp']['alter']['trim_whitespace'] = 0;
-$handler->display->display_options['fields']['timestamp']['alter']['nl2br'] = 0;
-$handler->display->display_options['fields']['timestamp']['alter']['word_boundary'] = 1;
-$handler->display->display_options['fields']['timestamp']['alter']['ellipsis'] = 1;
-$handler->display->display_options['fields']['timestamp']['alter']['strip_tags'] = 0;
-$handler->display->display_options['fields']['timestamp']['alter']['trim'] = 0;
-$handler->display->display_options['fields']['timestamp']['alter']['html'] = 0;
-$handler->display->display_options['fields']['timestamp']['element_type'] = '0';
-$handler->display->display_options['fields']['timestamp']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['timestamp']['element_wrapper_type'] = '0';
-$handler->display->display_options['fields']['timestamp']['element_default_classes'] = 0;
-$handler->display->display_options['fields']['timestamp']['hide_empty'] = 0;
-$handler->display->display_options['fields']['timestamp']['empty_zero'] = 0;
-$handler->display->display_options['fields']['timestamp']['hide_alter_empty'] = 1;
-$handler->display->display_options['fields']['timestamp']['date_format'] = 'custom';
-$handler->display->display_options['fields']['timestamp']['custom_date_format'] = 'c';
-/* Criterio de ordenación: Agregador: Sello temporal */
-$handler->display->display_options['sorts']['timestamp']['id'] = 'timestamp';
-$handler->display->display_options['sorts']['timestamp']['table'] = 'aggregator_item';
-$handler->display->display_options['sorts']['timestamp']['field'] = 'timestamp';
-$handler->display->display_options['sorts']['timestamp']['order'] = 'DESC';
-$handler->display->display_options['sorts']['timestamp']['granularity'] = 'minute';
-/* Criterios de filtrado: Canal de agregador: Enlace */
-$handler->display->display_options['filters']['link']['id'] = 'link';
-$handler->display->display_options['filters']['link']['table'] = 'aggregator_feed';
-$handler->display->display_options['filters']['link']['field'] = 'link';
-$handler->display->display_options['filters']['link']['operator'] = 'contains';
-$handler->display->display_options['filters']['link']['value'] = 'testimonios';
+/* Encabezado: Global: Text area */
+$handler->display->display_options['header']['area']['id'] = 'area';
+$handler->display->display_options['header']['area']['table'] = 'views';
+$handler->display->display_options['header']['area']['field'] = 'area';
+$handler->display->display_options['header']['area']['empty'] = FALSE;
+$handler->display->display_options['header']['area']['content'] = '<h1>Noticias de Machupicchu</h1>';
+$handler->display->display_options['header']['area']['format'] = '2';
+$handler->display->display_options['header']['area']['tokenize'] = 0;
+/* Campo: Contenido: Título */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['label'] = '';
+$handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
+$handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
+$handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
+$handler->display->display_options['fields']['title']['alter']['word_boundary'] = 0;
+$handler->display->display_options['fields']['title']['alter']['ellipsis'] = 0;
+$handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
+$handler->display->display_options['fields']['title']['alter']['trim'] = 0;
+$handler->display->display_options['fields']['title']['alter']['html'] = 0;
+$handler->display->display_options['fields']['title']['hide_empty'] = 0;
+$handler->display->display_options['fields']['title']['empty_zero'] = 0;
+$handler->display->display_options['fields']['title']['link_to_node'] = 1;
+/* Campo: Contenido: Tags */
+$handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
+$handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
+$handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
+$handler->display->display_options['fields']['field_tags']['label'] = '';
+$handler->display->display_options['fields']['field_tags']['alter']['alter_text'] = 0;
+$handler->display->display_options['fields']['field_tags']['alter']['make_link'] = 0;
+$handler->display->display_options['fields']['field_tags']['alter']['absolute'] = 0;
+$handler->display->display_options['fields']['field_tags']['alter']['external'] = 0;
+$handler->display->display_options['fields']['field_tags']['alter']['replace_spaces'] = 0;
+$handler->display->display_options['fields']['field_tags']['alter']['trim_whitespace'] = 0;
+$handler->display->display_options['fields']['field_tags']['alter']['nl2br'] = 0;
+$handler->display->display_options['fields']['field_tags']['alter']['word_boundary'] = 1;
+$handler->display->display_options['fields']['field_tags']['alter']['ellipsis'] = 1;
+$handler->display->display_options['fields']['field_tags']['alter']['strip_tags'] = 0;
+$handler->display->display_options['fields']['field_tags']['alter']['trim'] = 0;
+$handler->display->display_options['fields']['field_tags']['alter']['html'] = 0;
+$handler->display->display_options['fields']['field_tags']['element_type'] = '0';
+$handler->display->display_options['fields']['field_tags']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_tags']['element_wrapper_type'] = '0';
+$handler->display->display_options['fields']['field_tags']['element_default_classes'] = 0;
+$handler->display->display_options['fields']['field_tags']['hide_empty'] = 0;
+$handler->display->display_options['fields']['field_tags']['empty_zero'] = 0;
+$handler->display->display_options['fields']['field_tags']['hide_alter_empty'] = 1;
+$handler->display->display_options['fields']['field_tags']['field_api_classes'] = 0;
+/* Campo: Contenido: Cuerpo */
+$handler->display->display_options['fields']['body']['id'] = 'body';
+$handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+$handler->display->display_options['fields']['body']['field'] = 'body';
+$handler->display->display_options['fields']['body']['label'] = '';
+$handler->display->display_options['fields']['body']['alter']['alter_text'] = 0;
+$handler->display->display_options['fields']['body']['alter']['make_link'] = 0;
+$handler->display->display_options['fields']['body']['alter']['absolute'] = 0;
+$handler->display->display_options['fields']['body']['alter']['external'] = 0;
+$handler->display->display_options['fields']['body']['alter']['replace_spaces'] = 0;
+$handler->display->display_options['fields']['body']['alter']['trim_whitespace'] = 0;
+$handler->display->display_options['fields']['body']['alter']['nl2br'] = 0;
+$handler->display->display_options['fields']['body']['alter']['max_length'] = '400';
+$handler->display->display_options['fields']['body']['alter']['word_boundary'] = 1;
+$handler->display->display_options['fields']['body']['alter']['ellipsis'] = 1;
+$handler->display->display_options['fields']['body']['alter']['strip_tags'] = 0;
+$handler->display->display_options['fields']['body']['alter']['trim'] = 1;
+$handler->display->display_options['fields']['body']['alter']['html'] = 0;
+$handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['body']['element_default_classes'] = 1;
+$handler->display->display_options['fields']['body']['hide_empty'] = 0;
+$handler->display->display_options['fields']['body']['empty_zero'] = 0;
+$handler->display->display_options['fields']['body']['hide_alter_empty'] = 1;
+$handler->display->display_options['fields']['body']['type'] = 'text_plain';
+$handler->display->display_options['fields']['body']['settings'] = array(
+  'trim_length' => '600',
+);
+$handler->display->display_options['fields']['body']['field_api_classes'] = 0;
+/* Campo: Contenido: Post date */
+$handler->display->display_options['fields']['created']['id'] = 'created';
+$handler->display->display_options['fields']['created']['table'] = 'node';
+$handler->display->display_options['fields']['created']['field'] = 'created';
+$handler->display->display_options['fields']['created']['label'] = '';
+$handler->display->display_options['fields']['created']['alter']['alter_text'] = 0;
+$handler->display->display_options['fields']['created']['alter']['make_link'] = 0;
+$handler->display->display_options['fields']['created']['alter']['absolute'] = 0;
+$handler->display->display_options['fields']['created']['alter']['external'] = 0;
+$handler->display->display_options['fields']['created']['alter']['replace_spaces'] = 0;
+$handler->display->display_options['fields']['created']['alter']['trim_whitespace'] = 0;
+$handler->display->display_options['fields']['created']['alter']['nl2br'] = 0;
+$handler->display->display_options['fields']['created']['alter']['word_boundary'] = 1;
+$handler->display->display_options['fields']['created']['alter']['ellipsis'] = 1;
+$handler->display->display_options['fields']['created']['alter']['strip_tags'] = 0;
+$handler->display->display_options['fields']['created']['alter']['trim'] = 0;
+$handler->display->display_options['fields']['created']['alter']['html'] = 0;
+$handler->display->display_options['fields']['created']['element_type'] = '0';
+$handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['created']['element_wrapper_type'] = '0';
+$handler->display->display_options['fields']['created']['element_default_classes'] = 0;
+$handler->display->display_options['fields']['created']['hide_empty'] = 0;
+$handler->display->display_options['fields']['created']['empty_zero'] = 0;
+$handler->display->display_options['fields']['created']['hide_alter_empty'] = 1;
+$handler->display->display_options['fields']['created']['date_format'] = 'custom';
+$handler->display->display_options['fields']['created']['custom_date_format'] = 'c';
+/* Campo: Contenido: Ruta */
+$handler->display->display_options['fields']['path']['id'] = 'path';
+$handler->display->display_options['fields']['path']['table'] = 'node';
+$handler->display->display_options['fields']['path']['field'] = 'path';
+$handler->display->display_options['fields']['path']['label'] = '';
+$handler->display->display_options['fields']['path']['alter']['alter_text'] = 0;
+$handler->display->display_options['fields']['path']['alter']['make_link'] = 0;
+$handler->display->display_options['fields']['path']['alter']['absolute'] = 0;
+$handler->display->display_options['fields']['path']['alter']['external'] = 0;
+$handler->display->display_options['fields']['path']['alter']['replace_spaces'] = 0;
+$handler->display->display_options['fields']['path']['alter']['trim_whitespace'] = 0;
+$handler->display->display_options['fields']['path']['alter']['nl2br'] = 0;
+$handler->display->display_options['fields']['path']['alter']['word_boundary'] = 1;
+$handler->display->display_options['fields']['path']['alter']['ellipsis'] = 1;
+$handler->display->display_options['fields']['path']['alter']['strip_tags'] = 0;
+$handler->display->display_options['fields']['path']['alter']['trim'] = 0;
+$handler->display->display_options['fields']['path']['alter']['html'] = 0;
+$handler->display->display_options['fields']['path']['element_type'] = '0';
+$handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['path']['element_wrapper_type'] = '0';
+$handler->display->display_options['fields']['path']['element_default_classes'] = 0;
+$handler->display->display_options['fields']['path']['hide_empty'] = 0;
+$handler->display->display_options['fields']['path']['empty_zero'] = 0;
+$handler->display->display_options['fields']['path']['hide_alter_empty'] = 1;
+$handler->display->display_options['fields']['path']['absolute'] = 1;
+/* Campo: Contenido: Foto */
+$handler->display->display_options['fields']['field_picture']['id'] = 'field_picture';
+$handler->display->display_options['fields']['field_picture']['table'] = 'field_data_field_picture';
+$handler->display->display_options['fields']['field_picture']['field'] = 'field_picture';
+$handler->display->display_options['fields']['field_picture']['label'] = '';
+$handler->display->display_options['fields']['field_picture']['alter']['alter_text'] = 0;
+$handler->display->display_options['fields']['field_picture']['alter']['make_link'] = 0;
+$handler->display->display_options['fields']['field_picture']['alter']['absolute'] = 0;
+$handler->display->display_options['fields']['field_picture']['alter']['external'] = 0;
+$handler->display->display_options['fields']['field_picture']['alter']['replace_spaces'] = 0;
+$handler->display->display_options['fields']['field_picture']['alter']['trim_whitespace'] = 0;
+$handler->display->display_options['fields']['field_picture']['alter']['nl2br'] = 0;
+$handler->display->display_options['fields']['field_picture']['alter']['word_boundary'] = 1;
+$handler->display->display_options['fields']['field_picture']['alter']['ellipsis'] = 1;
+$handler->display->display_options['fields']['field_picture']['alter']['strip_tags'] = 0;
+$handler->display->display_options['fields']['field_picture']['alter']['trim'] = 0;
+$handler->display->display_options['fields']['field_picture']['alter']['html'] = 0;
+$handler->display->display_options['fields']['field_picture']['element_type'] = '0';
+$handler->display->display_options['fields']['field_picture']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_picture']['element_wrapper_type'] = '0';
+$handler->display->display_options['fields']['field_picture']['element_default_classes'] = 0;
+$handler->display->display_options['fields']['field_picture']['hide_empty'] = 0;
+$handler->display->display_options['fields']['field_picture']['empty_zero'] = 0;
+$handler->display->display_options['fields']['field_picture']['hide_alter_empty'] = 1;
+$handler->display->display_options['fields']['field_picture']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_picture']['settings'] = array(
+  'image_style' => 'new140x105',
+  'image_link' => 'content',
+);
+$handler->display->display_options['fields']['field_picture']['field_api_classes'] = 0;
+/* Sort criterion: Contenido: Post date */
+$handler->display->display_options['sorts']['created']['id'] = 'created';
+$handler->display->display_options['sorts']['created']['table'] = 'node';
+$handler->display->display_options['sorts']['created']['field'] = 'created';
+$handler->display->display_options['sorts']['created']['order'] = 'DESC';
+/* Filter criterion: Contenido: Publicado */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 0;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Contenido: Tipo */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'story' => 'story',
+);
+/* Filter criterion: Traducción del contenido: Idioma */
+$handler->display->display_options['filters']['language']['id'] = 'language';
+$handler->display->display_options['filters']['language']['table'] = 'node';
+$handler->display->display_options['filters']['language']['field'] = 'language';
+$handler->display->display_options['filters']['language']['value'] = array(
+  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+);
 
 /* Display: Block */
 $handler = $view->new_display('block', 'Block', 'block');
-$translatables['lea_testimonios_de_nuestros_pasa'] = array(
+$translatables['noticias'] = array(
   t('Master'),
-  t('Lea testimonios de nuestros pasajeros'),
+  t('Noticias'),
   t('más'),
-  t('Aplicar'),
+  t('Apply'),
   t('Reiniciar'),
   t('Ordenar por'),
   t('Ascendente'),
   t('Desc'),
-  t('<p class="mapi-more"><a href="http://testimonios.machupicchu.com.pe/" target="_blank">Miles de testimonios más...</a></p>'),
+  t('Elementos por página'),
+  t('- Todos -'),
+  t('Desplazamiento'),
+  t('<h1>Noticias de Machupicchu</h1>'),
   t('Block'),
+  t('more'),
 );
-
