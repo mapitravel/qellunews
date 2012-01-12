@@ -7,7 +7,7 @@
  * @param $form_state
  *   A keyed array containing the current state of the form.
  */
-function qelluchaska_form_system_theme_settings_alter(&$form, &$form_state)  {
+function qellunews_form_system_theme_settings_alter(&$form, &$form_state)  {
 
   // Create the form using Forms API: http://api.drupal.org/api/7
 

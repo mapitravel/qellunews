@@ -18,13 +18,13 @@
  *   this, we have to override the theme function. You have to first find the
  *   theme function that generates the output, and then "catch" it and modify it
  *   here. The easiest way to do it is to copy the original function in its
- *   entirety and paste it here, changing the prefix from theme_ to qelluchaska_.
+ *   entirety and paste it here, changing the prefix from theme_ to qellunews_.
  *   For example:
  *
  *     original: theme_breadcrumb()
- *     theme override: qelluchaska_breadcrumb()
+ *     theme override: qellunews_breadcrumb()
  *
- *   where qelluchaska is the name of your sub-theme. For example, the
+ *   where qellunews is the name of your sub-theme. For example, the
  *   zen_classic theme would define a zen_classic_breadcrumb() function.
  *
  *   If you would like to override either of the two theme functions used in Zen
@@ -68,7 +68,7 @@
  *   The name of the template being rendered ("html" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function qelluchaska_preprocess_html(&$variables, $hook) {
+function qellunews_preprocess_html(&$variables, $hook) {
   $variables['sample_variable'] = t('Lorem ipsum.');
 
   // The body tag's classes are controlled by the $classes_array variable. To
@@ -86,7 +86,7 @@ function qelluchaska_preprocess_html(&$variables, $hook) {
  *   The name of the template being rendered ("page" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function qelluchaska_preprocess_page(&$variables, $hook) {
+function qellunews_preprocess_page(&$variables, $hook) {
   $variables['sample_variable'] = t('Lorem ipsum.');
 }
 // */
@@ -100,11 +100,11 @@ function qelluchaska_preprocess_page(&$variables, $hook) {
  *   The name of the template being rendered ("node" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function qelluchaska_preprocess_node(&$variables, $hook) {
+function qellunews_preprocess_node(&$variables, $hook) {
   $variables['sample_variable'] = t('Lorem ipsum.');
 
   // Optionally, run node-type-specific preprocess functions, like
-  // qelluchaska_preprocess_node_page() or mapi2012_preprocess_node_story().
+  // qellunews_preprocess_node_page() or mapi2012_preprocess_node_story().
   $function = __FUNCTION__ . '_' . $variables['node']->type;
   if (function_exists($function)) {
     $function($variables, $hook);
@@ -121,7 +121,7 @@ function qelluchaska_preprocess_node(&$variables, $hook) {
  *   The name of the template being rendered ("comment" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function qelluchaska_preprocess_comment(&$variables, $hook) {
+function qellunews_preprocess_comment(&$variables, $hook) {
   $variables['sample_variable'] = t('Lorem ipsum.');
 }
 // */
@@ -135,7 +135,7 @@ function qelluchaska_preprocess_comment(&$variables, $hook) {
  *   The name of the template being rendered ("block" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function qelluchaska_preprocess_block(&$variables, $hook) {
+function qellunews_preprocess_block(&$variables, $hook) {
   // Add a count to all the blocks in the region.
   $variables['classes_array'][] = 'count-' . $variables['block_id'];
 }
@@ -151,6 +151,6 @@ if(drupal_is_front_page()) {
 		'weight' => 10,
 		'preprocess' => FALSE
 	);
-  drupal_add_css(drupal_get_path('theme', 'qelluchaska') . "/styles/page-front.css", $options);
+  drupal_add_css(drupal_get_path('theme', 'qellunews') . "/styles/page-front.css", $options);
 }
 
