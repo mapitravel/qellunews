@@ -113,7 +113,12 @@
             <?php if ($tabs): ?>
             <div class="tabs"><?php print render($tabs); ?></div>
             <?php endif; ?>
-            <?php print render($page['content']); ?> </div>
+		<?php if($is_front) : ?>
+            <?php print render($page['welcome']); ?>
+	<?php else: ?>
+            <?php print render($page['content']); ?>
+	<?php endif; ?>
+	 </div>
         </div>
       </div>
       <div class="clear"></div>
